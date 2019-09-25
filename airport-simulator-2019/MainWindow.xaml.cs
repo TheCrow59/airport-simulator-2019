@@ -20,9 +20,12 @@ namespace airport_simulator_2019
     /// </summary>
     public partial class MainWindow : Window
     {
+        AirportSimulatorGame _game = new AirportSimulatorGame();
+
         public MainWindow()
         {
             InitializeComponent();
+            Task.Run(() => _game.run());
         }
 
         private void RealTime_Click(object sender, RoutedEventArgs e)
@@ -30,6 +33,8 @@ namespace airport_simulator_2019
             RealTime.IsEnabled = false;
             Fast.IsEnabled = true;
             VeryFast.IsEnabled = true;
+
+            _game.SetNormalSpeed();
         }
 
         private void Fast_Click(object sender, RoutedEventArgs e)
@@ -37,6 +42,8 @@ namespace airport_simulator_2019
             RealTime.IsEnabled = true;
             Fast.IsEnabled = false;
             VeryFast.IsEnabled = true;
+
+            _game.SetFastSpeed();
         }
 
         private void VeryFast_Click(object sender, RoutedEventArgs e)
@@ -44,6 +51,8 @@ namespace airport_simulator_2019
             RealTime.IsEnabled = true;
             Fast.IsEnabled = true;
             VeryFast.IsEnabled = false;
+
+            _game.SetVeryFastSpeed();
         }
     }
 }
