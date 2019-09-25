@@ -9,7 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -28,5 +28,38 @@
             <Label Content="Бюджет Аэропорта:" />
             <Label Content="0 руб." />
         </WrapPanel>
+
+        <TabControl Grid.Row="1" Grid.ColumnSpan="2">
+            <TabItem Header="">
+                
+            </TabItem>
+            <TabItem Header="">
+
+            </TabItem>
+            <TabItem Header="">
+
+            </TabItem>
+            <TabItem Header="">
+
+            </TabItem>
+            <TabItem Header="Магазин Самолетов">
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Название" />
+                        <DataGridTextColumn Header="Кол-во пассажирских мест" />
+                        <DataGridTextColumn Header="Допустимый вес груза" />
+                        <DataGridTextColumn Header="Допустимая дальность перелета" />
+                        <DataGridTextColumn Header="Скорость" />
+                        <DataGridTextColumn Header="Расход топлива" />
+                        <DataGridTextColumn Header="Цена покупки" />
+                        <DataGridTextColumn Header="Цена продажи" />
+                        <DataGridTextColumn Header="Цена аренды" />
+                        <DataGridTextColumn Header="Срок владения" />
+                        <DataGridTextColumn Header="Местоположение " />
+                        <DataGridTextColumn Header="В рейсе?" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
