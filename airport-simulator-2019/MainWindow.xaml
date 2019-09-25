@@ -1,0 +1,22 @@
+﻿<Window x:Class="airport_simulator_2019.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:airport_simulator_2019"
+        mc:Ignorable="d"
+        Title="Airport Simulator 2019" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="1">
+            <Label Content="Current Time" Margin="2 0 2 0" />
+            <Button Name="RealTime" Content=">" Margin="2 0 2 0" Click="RealTime_Click" IsEnabled="False" />
+            <Button Name="Fast"  Content=">>" Margin="2 0 2 0" Click="Fast_Click" />
+            <Button Name="VeryFast" Content=">>>" Margin="2 0 2 0" Click="VeryFast_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>
