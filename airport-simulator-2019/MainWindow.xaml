@@ -39,10 +39,7 @@
             <TabItem Header="">
 
             </TabItem>
-            <TabItem Header="">
-
-            </TabItem>
-            <TabItem Header="Магазин Самолетов">
+            <TabItem Header="Мои Самолеты">
                 <DataGrid>
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Название" />
@@ -57,6 +54,21 @@
                         <DataGridTextColumn Header="Срок владения" />
                         <DataGridTextColumn Header="Местоположение " />
                         <DataGridTextColumn Header="В рейсе?" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Магазин Самолетов">
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Название" />
+                        <DataGridTextColumn Header="Кол-во пассажирских мест" />
+                        <DataGridTextColumn Header="Допустимый вес груза" />
+                        <DataGridTextColumn Header="Допустимая дальность перелета" />
+                        <DataGridTextColumn Header="Скорость" />
+                        <DataGridTextColumn Header="Расход топлива" />
+                        <DataGridTextColumn Header="Цена покупки" />
+                        <DataGridTextColumn Header="Цена продажи" />
+                        <DataGridTextColumn Header="Цена аренды" />
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
