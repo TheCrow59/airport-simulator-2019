@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
 
         <WrapPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
-            <Label Name="CurrentTime"  Content="Current Time" Margin="2 0 2 0" />
+            <Label Name="CurrentTime" Content="{Binding Time}" Margin="2 0 2 0" />
             <Button Name="RealTime" Content=">" Margin="2 0 2 0" Click="RealTime_Click" IsEnabled="False" />
             <Button Name="Fast"  Content=">>" Margin="2 0 2 0" Click="Fast_Click" />
             <Button Name="VeryFast" Content=">>>" Margin="2 0 2 0" Click="VeryFast_Click" />

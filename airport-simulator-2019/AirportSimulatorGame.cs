@@ -1,16 +1,35 @@
 ﻿using System;
-using System.Threading;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace airport_simulator_2019
 {
-    public class AirportSimulatorGame
+    public class AirportSimulatorGame : INotifyPropertyChanged
     {
         private DateTime _time;
         private int _offset;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public DateTime Time
+        {
+            get
+            {
+                return _time;
+            }
+
+            set
+            {
+                _time = value;
+                OnPropertyChanged("Time");
+            }
+        }
 
         public AirportSimulatorGame()
         {
@@ -33,12 +52,12 @@ namespace airport_simulator_2019
             _offset = 3600;
         }
 
-        public void run()
+        public async void run()
         {
             while (true)
             {
-                _time = _time.AddSeconds(_offset);
-                Thread.Sleep(1000);
+                Time = Time.AddSeconds(_offset);
+                await Task.Delay(1000);
             }
         }
     }
