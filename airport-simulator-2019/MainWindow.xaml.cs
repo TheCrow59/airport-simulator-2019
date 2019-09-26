@@ -40,5 +40,15 @@ namespace airport_simulator_2019
 
             _game.SetVeryFastSpeed();
         }
+
+        private void BuyAirplane_Click(object sender, RoutedEventArgs e)
+        {
+            switch (MessageBox.Show("Вы уверены, что хотите выкупить этот самолет?", "Подтверждение покупки", MessageBoxButton.YesNo))
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Успех");
+                    break;
+            }
+        }
     }
 }

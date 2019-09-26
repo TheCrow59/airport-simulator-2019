@@ -57,19 +57,30 @@
                 </DataGrid>
             </TabItem>
             <TabItem Header="Магазин Самолетов">
-                <DataGrid>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Название" />
-                        <DataGridTextColumn Header="Кол-во пассажирских мест" />
-                        <DataGridTextColumn Header="Допустимый вес груза" />
-                        <DataGridTextColumn Header="Допустимая дальность перелета" />
-                        <DataGridTextColumn Header="Скорость" />
-                        <DataGridTextColumn Header="Расход топлива" />
-                        <DataGridTextColumn Header="Цена покупки" />
-                        <DataGridTextColumn Header="Цена продажи" />
-                        <DataGridTextColumn Header="Цена аренды" />
-                    </DataGrid.Columns>
-                </DataGrid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <DataGrid Grid.Row="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название" />
+                            <DataGridTextColumn Header="Кол-во пассажирских мест" />
+                            <DataGridTextColumn Header="Допустимый вес груза" />
+                            <DataGridTextColumn Header="Допустимая дальность перелета" />
+                            <DataGridTextColumn Header="Скорость" />
+                            <DataGridTextColumn Header="Расход топлива" />
+                            <DataGridTextColumn Header="Цена покупки" />
+                            <DataGridTextColumn Header="Цена продажи" />
+                            <DataGridTextColumn Header="Цена аренды" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <WrapPanel Grid.Row="1" HorizontalAlignment="Right">
+                        <Button Name="BuyAirplane" Content="Купить Самолет" Click="BuyAirplane_Click" />
+                    </WrapPanel>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
