@@ -9,6 +9,7 @@ namespace airport_simulator_2019
     {
         private DateTime _time;
         private int _offset;
+        private int _balance;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -31,10 +32,25 @@ namespace airport_simulator_2019
             }
         }
 
+        public int Balance
+        {
+            get
+            {
+                return _balance;
+            }
+
+            set
+            {
+                _balance = value;
+                OnPropertyChanged("Balance");
+            }
+        }
+
         public AirportSimulatorGame()
         {
-            _time = DateTime.Now;
             _offset = 1;
+            Time = DateTime.Now;
+            Balance = 1000000;
         }
 
         public void SetNormalSpeed()
