@@ -60,5 +60,14 @@ namespace airport_simulator_2019
                     break;
             }
         }
+
+        private void RentAirplane_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new RentAirplaneDialog();
+            if ((bool)dialog.ShowDialog())
+            {
+                MessageBox.Show("Успех");
+            }
+        }
     }
 }
