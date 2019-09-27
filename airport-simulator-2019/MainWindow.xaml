@@ -33,12 +33,39 @@
             <TabItem Header="">
                 
             </TabItem>
+            
             <TabItem Header="">
 
             </TabItem>
-            <TabItem Header="">
+            
+            <TabItem Header="Доска Объявлений">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
+                    <DataGrid Grid.Row="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Город отправления" />
+                            <DataGridTextColumn Header="Город назначения" />
+                            <DataGridTextColumn Header="Расстояние" />
+                            <DataGridTextColumn Header="Вид" />
+                            <DataGridTextColumn Header="Тип" />
+                            <DataGridTextColumn Header="Частота" />
+                            <DataGridTextColumn Header="Необходимая грузоподъемность" />
+                            <DataGridTextColumn Header="Оплата за одного пассажира" />
+                            <DataGridTextColumn Header="Оплата за рейс" />
+                            <DataGridTextColumn Header="Дата" />
+                            <DataGridTextColumn Header="Сумма неустойки" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <WrapPanel Grid.Row="1" HorizontalAlignment="Right">
+                    </WrapPanel>
+                </Grid>
             </TabItem>
+            
             <TabItem Header="Мои Самолеты">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -68,6 +95,7 @@
                     </WrapPanel>
                 </Grid>
             </TabItem>
+            
             <TabItem Header="Магазин Самолетов">
                 <Grid>
                     <Grid.RowDefinitions>
