@@ -50,5 +50,15 @@ namespace airport_simulator_2019
                     break;
             }
         }
+
+        private void SellAirplane_Click(object sender, RoutedEventArgs e)
+        {
+            switch (MessageBox.Show("Вы уверены, что хотите продать этот самолет?", "Подтверждение продажи", MessageBoxButton.YesNo))
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Успех");
+                    break;
+            }
+        }
     }
 }

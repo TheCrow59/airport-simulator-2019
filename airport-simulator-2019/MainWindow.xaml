@@ -79,6 +79,7 @@
 
                     <WrapPanel Grid.Row="1" HorizontalAlignment="Right">
                         <Button Name="BuyAirplane" Content="Купить Самолет" Click="BuyAirplane_Click" />
+                        <Button Name="SellAirplane" Content="Продать Самолет" Click="SellAirplane_Click" />
                     </WrapPanel>
                 </Grid>
             </TabItem>
