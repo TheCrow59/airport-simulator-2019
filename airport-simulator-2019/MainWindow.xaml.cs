@@ -69,5 +69,15 @@ namespace airport_simulator_2019
                 MessageBox.Show("Успех");
             }
         }
+
+        private void TakeFlight_Click(object sender, RoutedEventArgs e)
+        {
+            switch (MessageBox.Show("Вы уверены, что хотите взять этот рейс?", "Подтверждение взятия рейса", MessageBoxButton.YesNo))
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Успех");
+                    break;
+            }
+        }
     }
 }
