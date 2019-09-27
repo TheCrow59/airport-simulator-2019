@@ -40,22 +40,33 @@
 
             </TabItem>
             <TabItem Header="Мои Самолеты">
-                <DataGrid>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Название" />
-                        <DataGridTextColumn Header="Кол-во пассажирских мест" />
-                        <DataGridTextColumn Header="Допустимый вес груза" />
-                        <DataGridTextColumn Header="Допустимая дальность перелета" />
-                        <DataGridTextColumn Header="Скорость" />
-                        <DataGridTextColumn Header="Расход топлива" />
-                        <DataGridTextColumn Header="Цена покупки" />
-                        <DataGridTextColumn Header="Цена продажи" />
-                        <DataGridTextColumn Header="Цена аренды" />
-                        <DataGridTextColumn Header="Срок владения" />
-                        <DataGridTextColumn Header="Местоположение " />
-                        <DataGridTextColumn Header="В рейсе?" />
-                    </DataGrid.Columns>
-                </DataGrid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Grid.Row="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название" />
+                            <DataGridTextColumn Header="Кол-во пассажирских мест" />
+                            <DataGridTextColumn Header="Допустимый вес груза" />
+                            <DataGridTextColumn Header="Допустимая дальность перелета" />
+                            <DataGridTextColumn Header="Скорость" />
+                            <DataGridTextColumn Header="Расход топлива" />
+                            <DataGridTextColumn Header="Цена покупки" />
+                            <DataGridTextColumn Header="Цена продажи" />
+                            <DataGridTextColumn Header="Цена аренды" />
+                            <DataGridTextColumn Header="Срок владения" />
+                            <DataGridTextColumn Header="Местоположение " />
+                            <DataGridTextColumn Header="В рейсе?" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <WrapPanel Grid.Row="1" HorizontalAlignment="Right">
+                        <Button Name="SellAirplane" Content="Продать Самолет" Click="SellAirplane_Click" />
+                    </WrapPanel>
+                </Grid>
             </TabItem>
             <TabItem Header="Магазин Самолетов">
                 <Grid>
@@ -80,7 +91,6 @@
 
                     <WrapPanel Grid.Row="1" HorizontalAlignment="Right">
                         <Button Name="BuyAirplane" Content="Купить Самолет" Click="BuyAirplane_Click" />
-                        <Button Name="SellAirplane" Content="Продать Самолет" Click="SellAirplane_Click" />
                         <Button Name="RentAirplane" Content="Арендовать Самолет" Click="RentAirplane_Click" />
                     </WrapPanel>
                 </Grid>
